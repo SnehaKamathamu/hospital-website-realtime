@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Ravi's Poly Clinic</title>
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- normalize css -->
+    <link rel = "stylesheet" href = "css/normalize.css">
+    <!-- custom css -->
+    <link rel = "stylesheet" href = "photo_gallery.css">
+</head>
+<body>
+
+    <!-- header -->
+    <header class = "header bg-blue">
+        <nav class = "navbar bg-blue">
+            <div class = "container flex">
+                <a href = "index.html" class = "navbar-brand">
+                    <img src = "images/luguuuuu.png" alt = "site logo">
+                </a>
+                <button type = "button" class = "navbar-show-btn">
+                    <img src = "images/ham-menu-icon.png">
+                </button>
+
+                <div class = "navbar-collapse bg-white">
+                    <button type = "button" class = "navbar-hide-btn">
+                        <img src = "images/close-icon.png">
+                    </button>
+                    <ul class = "navbar-nav">
+                        <li class = "nav-item">
+                            <a href = "index.html" class = "nav-link">Home</a>
+                        </li>
+                        <li class = "nav-item">
+                            <a href = "index.html#about" class = "nav-link">About</a>
+                        </li>
+                        <li class = "nav-item">
+                            <a href = "index.html#services" class = "nav-link">Service</a>
+                        </li>
+                        <li class = "nav-item">
+                            <a href = "index.html#doc-panel" class = "nav-link">Doctors</a>
+                        </li>
+                        <li class = "nav-item">
+                            <a href = "photo_gallery.html" class = "nav-link">Gallery</a>
+                        </li>
+                        <li class = "nav-item">
+                            <a href = "index.html#posts" class = "nav-link">Reviews</a>
+                        </li>
+                        <li class = "nav-item">
+                            <a href = "index.html#contact" class = "nav-link">Contact</a>
+                        </li>
+                    </ul>
+                </div> 
+            </div>
+        </nav>
+
+       <main class="pg-main" style="background-color: white;">
+            <input type="radio" name="Photos" id="check1" checked>
+            <input type="radio" name="Photos" id="check2">
+            <input type="radio" name="Photos" id="check3">
+            <input type="radio" name="Photos" id="check4">
+
+            <div class="pg-container" style="padding-top:180px;">
+                <h1 class="pg-title">OUR PHOTO GALLERY</h1>
+                <div class="pg-photo-gallery">
+                    <div class="pg-pic"><img src="gallery/por/1.jpg" /></div>
+                    <!-- <div class="pg-pic"><img src="gallery/por/2.jpg" /></div> -->
+                    <div class="pg-pic"><img src="gallery/por/3.jpg" /></div>
+                    <div class="pg-pic"><img src="gallery/por/4.jpg" /></div>
+                    <div class="pg-pic"><img src="gallery/por/uncul.jpg" /></div>
+                    <div class="pg-pic"><img src="gallery/por/5.jpg" /></div>
+                    <div class="pg-pic"><img src="gallery/por/6.jpg" /></div>
+                    <div class="pg-pic"><img src="gallery/por/7.jpg" /></div>
+                    <div class="pg-pic"><img src="gallery/por/18.jpg" /></div>
+                    <div class="pg-pic"><img src="gallery/por/8.jpg" /></div>
+                    <div class="pg-pic"><img src="gallery/por/9.jpg" /></div>
+                    <div class="pg-pic"><img src="gallery/por/10.jpg" /></div>
+                    <div class="pg-pic"><img src="gallery/por/11.jpg" /></div>
+                    <div class="pg-pic"><img src="gallery/por/12.jpg" /></div>
+                    <div class="pg-pic"><img src="gallery/por/13.jpg" /></div>
+                    <div class="pg-pic"><img src="gallery/por/14.jpg" /></div>
+                    <div class="pg-pic"><img src="gallery/por/15.jpg" /></div>
+                    <div class="pg-pic"><img src="gallery/por/16.jpg" /></div>
+                    <div class="pg-pic"><img src="gallery/por/17.jpg" /></div>
+                </div>
+            </div>
+        </main>
+
+
+    <!-- footer  -->
+    <footer id = "footer" class = "footer text-center" >
+        <div class = "container" >
+            <div class = "footer-inner text-white py grid" style = "color:white;">
+                <div class = "footer-item">
+                    <h3 class = "footer-head">about us</h3>
+                    <div class = "icon">
+                        <img src = "images/luguuuuu.png" style="height:40px; width:180px">
+                    </div>
+                    <p class = "text text-md" >
+                        At Dr. Ravi’s Poly Clinic, we are committed to delivering compassionate, high-quality healthcare while ensuring every patient is treated with kindness, respect, and individual attention.
+                    </p>
+                    <address>
+                        <b>Dr.Ravi's Poly Clinic</b> <br>
+                        Plot No. SFL/4, Patwari Enclave, <br>
+                        Starlite Pavilion, Chintal, <br>
+                        Opp. MTAR Factory, <br>
+                        Hyderabad - 500 054.
+                    </address>
+                </div>
+
+                <div class = "footer-item">
+                    <h3 class = "footer-head">Make an Appointment</h3>
+                    <p class = "text text-md" style ="padding-top:0px;">To book an appointment contact the below phone number...
+                        <br><br> <b>For Morning Session:</b><br> Call at 8:30 am
+                        <br><b>For Evening Session:</b><br> Call at 4:30pm
+                    </p>
+                    
+                    <ul class = "appointment-info">
+                        <li>
+                            <p style = "font-size:15.35px;"><i class = "fas fa-envelope"></i>
+                            <a href="mailto:dr.ravispolyclinic7@gmail.com">dr.ravispolyclinic7@gmail.com</a></p>
+                        </li>
+                        <li>
+                            <i class = "fas fa-phone"></i>
+                            <span><a href="tel:+919390925268" class="phone-link">+91 9390925268</a></span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class = "footer-item">
+                    <h3 class = "footer-head" >Quick Links</h3>
+                    <ul>
+                        <li><a href = "index.html#about" class = "text-white">About Us</a></li>
+                        <li><a href = "index.html#doc-panel" class = "text-white">Our Doctors</a></li>
+                        <li><a href = "index.html#services" class = "text-white">Our Services</a></li>
+                        <li><a href = "photo_gallery.html" class = "text-white">Hospital Infrastructure</a></li>
+                    </ul>
+                </div>
+
+                <div class = "footer-item">
+                    <h3 class = "footer-head">TIMINGS</h3>
+                    
+                    <ul class = "appointment-info">
+                        <li><b>Monday to Saturday</b></li>
+                        <li>10:30 AM - 2:00 PM</li>
+                        <li>7:00 PM - 10:00 PM</li>
+                        <li><b>Sunday</b></li>
+                        <li>10:30 AM - 2:00 PM</li>
+                        <br>
+                    </ul>
+                </div>
+            </div>
+
+            <div class = "footer-links">
+                <p style = "color: white;">All rights reserved. Made by Sneha Kamathamu. Copyrights@2025.</p>
+                <!-- <ul class = "flex">
+                    <li><a href = "#" class = "text-white flex"> <i class = "fab fa-facebook-f"></i></a></li>
+                    <li><a href = "#" class = "text-white flex"> <i class = "fab fa-twitter"></i></a></li>
+                    <li><a href = "#" class = "text-white flex"> <i class = "fab fa-linkedin"></i></a></li>
+                </ul> -->
+            </div>
+        </div>
+    </footer>
+    <!-- end of footer  -->
+
+
+    <!-- custom js -->
+    <script src = "js/script.js"></script>
+    <a href="tel:+919390925268" class="floating-call" title="Call Now">
+        <i class="fas fa-phone"></i>
+    </a>
+    <a href="javascript:void(0);" class="floating-feedback" title="Leave Feedback" onclick="openForm()">
+        <i class="fas fa-comment-dots"></i>
+    </a>
+</body>
+</html>
