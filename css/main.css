@@ -382,10 +382,7 @@ button[class ^= navbar]:hover{
     margin:0;
   
 }
-/* .about-right{
-    margin:0px;
-    padding:0px;
-} */
+
 .about-left .text{
     margin: 5.6rem 0;
     line-height: 2.3;
@@ -609,15 +606,15 @@ button[class ^= navbar]:hover{
     margin-top: 8rem;
     display: flex;
     justify-content: space-between;
-    gap: 1rem; /* space between cards */
-    flex-wrap: nowrap; /* keep everything in one line */
+    gap: 1rem; 
+    flex-wrap: nowrap; 
     overflow-x: auto;  
 }
 .doc-panel-item .img img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* crops image perfectly without distortion */
-    border-radius: 8px; /* optional: smooth corners */
+    object-fit: cover; 
+    border-radius: 8px; 
 }
 
 .doc-panel-item{
@@ -627,8 +624,8 @@ button[class ^= navbar]:hover{
     margin-bottom: 0;
 }
 .doc-panel-item .img{
-     width: 250px;    /* fixed width */
-    height: 300px;   /* fixed height */
+     width: 250px;   
+    height: 300px;   
     margin-left: auto;
     margin-right: auto;
     overflow: hidden;
@@ -1376,3 +1373,4 @@ button[class ^= navbar]:hover{
     -o-transition: none!important;
     transition: none!important;
 }
+
