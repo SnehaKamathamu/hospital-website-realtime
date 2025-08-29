@@ -503,43 +503,49 @@
     <div class="feedback-box" id="popup">
         <button class="close-btn" onclick="togglePopup()">x</button>
         <h2>Leave Your Feedback</h2>
-        <form id="feedbackForm"  method="POST">
-                <input type="text" name="name" placeholder="Your Name" required>
-                <textarea name="message" placeholder="Your Message" required></textarea>
-                <button type="submit">Submit</button>
+        <form id="feedbackForm" method="POST">
+        <input type="text" id="name" name="name" placeholder="Your Name" required>
+        <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+        <button 
+            type="button" 
+            onclick="submitFeedback()" 
+            style="display:block; margin:10px auto; padding:8px 16px; background-color:green; color:white; border:none; cursor:pointer;">
+            Submit
+        </button>
         </form>
     </div>
 </div>
 
-    <!-- ✅ JavaScript to send form data to Flask
-    <script>
-        document.getElementById('feedbackForm').addEventListener('submit', function(e) {
-            e.preventDefault(); // Stop page from reloading
+<script>
+function submitFeedback() {
+    const formData = {
+        name: document.getElementById("name").value,
+        message: document.getElementById("message").value
+    };
 
-            const formData = new FormData(this);
+    fetch("http://localhost:3000/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData)
+    })
+    .then(res => res.json())
+    .then(data => {
+        if (data.status === "success") {
+            alert("✅ Feedback submitted successfully!");
+            document.getElementById("feedbackForm").reset();
+        } else {
+            alert("❌ " + data.message);
+        }
+    })
+    .catch(err => {
+        alert("⚠️ Something went wrong!");
+        console.error(err);
+    });
+}
+</script>
 
-            fetch('/submit', {
-                method: 'POST',
-                body: formData
-            })
-            .then(res => res.json())
-            .then(data => {
-                if (data.status === 'success') {
-                    alert('✅ Feedback submitted successfully!');
-                    this.reset();
-                } else {
-                    alert('❌ Error: ' + data.message);
-                }
-            })
-            .catch(err => {
-                alert('⚠️ Something went wrong!');
-                console.error(err);
-            });
-        });
-    </script> -->
-
-    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
-    <script src="js/script.js"></script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    <script src="script.js"></script>
 
 </body>
 </html>
