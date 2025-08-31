@@ -30,12 +30,13 @@ const db = mysql.createPool({
 });
 
 
-db.connect((err) => {
-    if (err) {
-        console.error('❌ MySQL connection failed:', err);
-        return;
-    }
+db.getConnection((err, connection) => {
+  if (err) {
+    console.error('❌ MySQL connection failed:', err);
+  } else {
     console.log('✅ Connected to MySQL Database');
+    connection.release();
+  }
 });
 
 // Serve your HTML + JS files (since both are in root)
