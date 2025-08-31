@@ -523,7 +523,7 @@ function submitFeedback() {
         message: document.getElementById("message").value
     };
 
-    fetch("http://localhost:3000/submit", {
+    fetch("https://hospital-website-realtime-production.up.railway.app/submit", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData)
@@ -549,3 +549,4 @@ function submitFeedback() {
 
 </body>
 </html>
+
