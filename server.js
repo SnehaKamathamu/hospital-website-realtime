@@ -19,15 +19,16 @@ app.use(bodyParser.json());
 //     password: 'ribhav123', // 🔹 replace with your MySQL password
 //     database: 'clinic_feedback'
 // });
+const db = mysql.createPool(process.env.MYSQL_URL + "?ssl={" + JSON.stringify({ rejectUnauthorized: true }) + "}");
 
-const db = mysql.createPool({
-  host: process.env.MYSQLHOST,
-  user: process.env.MYSQLUSER,
-  password: process.env.MYSQLPASSWORD,
-  database: process.env.MYSQLDATABASE,
-  port: process.env.MYSQLPORT,
-  ssl: { rejectUnauthorized: true } // required by Railway MySQL
-});
+// const db = mysql.createPool({
+//   host: process.env.MYSQLHOST,
+//   user: process.env.MYSQLUSER,
+//   password: process.env.MYSQLPASSWORD,
+//   database: process.env.MYSQLDATABASE,
+//   port: process.env.MYSQLPORT,
+//   ssl: { rejectUnauthorized: true } // required by Railway MySQL
+// });
 
 
 db.connect((err) => {
