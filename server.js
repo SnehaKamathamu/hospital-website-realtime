@@ -13,12 +13,22 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 // MySQL connection
-const db = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',        // 🔹 replace with your MySQL username
-    password: 'ribhav123', // 🔹 replace with your MySQL password
-    database: 'clinic_feedback'
+// const db = mysql.createConnection({
+//     host: 'localhost',
+//     user: 'root',        // 🔹 replace with your MySQL username
+//     password: 'ribhav123', // 🔹 replace with your MySQL password
+//     database: 'clinic_feedback'
+// });
+
+const db = mysql.createPool({
+  host: process.env.MYSQLHOST,
+  user: process.env.MYSQLUSER,
+  password: process.env.MYSQLPASSWORD,
+  database: process.env.MYSQLDATABASE,
+  port: process.env.MYSQLPORT,
+  ssl: { rejectUnauthorized: true } // required by Railway MySQL
 });
+
 
 db.connect((err) => {
     if (err) {
