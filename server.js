@@ -54,7 +54,7 @@ app.post('/submit', (req, res) => {
         return res.status(400).json({ status: 'error', message: 'Name and message are required' });
     }
 
-    const sql = 'INSERT INTO feedback (name, message) VALUES (?, ?)';
+    const sql = 'INSERT INTO feedback1 (name, message) VALUES (?, ?)';
     db.query(sql, [name, message], (err, result) => {
         if (err) {
             console.error('❌ Error inserting feedback:', err);
